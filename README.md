@@ -12,10 +12,10 @@ take turn
 
 #CRC
 
-Board
------------------
-|marker_location|Markers|
-|ship_location|Player|
+|Board |
+|----------------|:-----------:|
+| marker_location | Markers |
+| ship_location | Player |
 
 
 Ships
