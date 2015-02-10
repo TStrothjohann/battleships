@@ -13,26 +13,26 @@ take turn
 #CRC
 
 |Board | |
-|----------------|:-----------:|
+|-----------------|---------|
 | marker_location | Markers |
-| ship_location | Player |
+| ship_location   | Player  |
 
 
 |Ships | |
-|----------------|:-----------:|
-|@length||
-|@hitcount||
-|floating?||
+|---------------------|-------|
+|@length    | |
+|@hitcount  | |
+|floating?  | |
 
 
 |Player | |
-|----------------|:-----------:|
-|place_ships|Board|
-|place_marker|Board|
-|@floatingships_count|Ships|
+|---------------------|-------|
+|place_ships          | Board |
+|place_marker         | Board |
+|@floatingships_count | Ships |
 
 |Game | |
-|----------------|:-----------:|
-|play!|Players|
-|floating_ships?|Player|
-|win|self|
+|----------------|-----------|
+|play!           | Players   |
+|floating_ships? | Player    |
+|win             | self      |
