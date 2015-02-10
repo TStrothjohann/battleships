@@ -12,7 +12,7 @@ take turn
 
 #CRC
 
-|Board |
+|Board | |
 |----------------|:-----------:|
 | marker_location | Markers |
 | ship_location | Player |
