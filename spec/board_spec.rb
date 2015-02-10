@@ -18,4 +18,10 @@ describe Board do
     expect(board.cell_lookup(:a2)).to eq(:missed)
   end
 
+  it 'should be able to place a hit-marker' do
+    board.place_ship(:a1)
+    board.set_marker(:a1)
+    expect(board.cell_lookup(:a1)).to eq(:hit)
+  end
+
 end

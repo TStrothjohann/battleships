@@ -25,4 +25,8 @@ class Board
     @cells[cell] 
   end
 
+  def set_marker(cell)
+    @cells[cell] = :missed
+  end
+
 end
