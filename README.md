@@ -18,21 +18,21 @@ take turn
 | ship_location | Player |
 
 
-Ships
------------------
+|Ships | |
+|----------------|:-----------:|
 |@length||
 |@hitcount||
 |floating?||
 
 
-Player
------------------
+|Player | |
+|----------------|:-----------:|
 |place_ships|Board|
 |place_marker|Board|
 |@floatingships_count|Ships|
 
-Game
------------------
+|Game | |
+|----------------|:-----------:|
 |play!|Players|
 |floating_ships?|Player|
 |win|self|
