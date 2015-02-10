@@ -1,11 +1,12 @@
 class Board
-  def initialize 
+  attr_accessor :cells
 
+  def initialize 
+      @cells = Hash.new
   end
 
   def make_board(width)
     @width = width
-    @cells = Hash.new
     @cells[:a1] = :water
     @cells[:a2] = :water
     @cells[:b1] = :water
@@ -14,6 +15,14 @@ class Board
 
   def cell_count
 		@cells.length
+  end
+
+  def place_ship(cell)
+    @cells[cell] = :ship
+  end
+
+  def cell_lookup(cell)
+    @cells[cell] 
   end
 
 end
