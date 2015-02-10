@@ -16,4 +16,14 @@ describe Ship do
 		expect(ship.hit_count).to eq (0)
 	end
 
+	it 'should be able to be hit.' do
+		ship.hit!
+		expect(ship.hit_count).to eq(1)
+	end
+
+	it 'it should know, when it\'s sunk' do
+		ship.hit!
+		expect(ship).not_to be_floating
+	end
+
 end
