@@ -26,7 +26,11 @@ class Board
   end
 
   def set_marker(cell)
-    @cells[cell] = :missed
+      if cell_lookup(cell) == :ship
+         @cells[cell] = :hit
+       else
+        @cells[cell] = :missed
+       end
   end
 
 end

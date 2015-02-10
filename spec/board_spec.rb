@@ -24,4 +24,9 @@ describe Board do
     expect(board.cell_lookup(:a1)).to eq(:hit)
   end
 
+  it "should not set a marker that has allready been set" do
+    board.set_marker(:b2)
+    expect{board.set_marker(:b2)}.to eq("You have asked me that, stupid!")
+  end
+
 end
