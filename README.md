@@ -36,3 +36,22 @@ take turn
 |play!           | Players   |
 |floating_ships? | Player    |
 |win             | self      |
+
+
+
+Todo:
+
+Player
+  
+Ship
+  #
+
+
+Cell
+  
+
+Game
+  # Setup Board-1 and Board-2
+  # Setup Player-1 and Player-2 (maybe Select your name: gets.chomp)
+  # Tell when a player has won
+  #
