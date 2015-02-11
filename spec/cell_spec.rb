@@ -18,7 +18,7 @@ describe Cell do
     expect(cella1.status).to eq(:water)
   end
 
-	it 'it should be able to change it\'s status' do
+	it 'should be able to change it\'s status' do
 		expect(cella1.status).to eq(:water)
 		cella1.change_status(:ship)
 		expect(cella1.status).to eq(:ship)
