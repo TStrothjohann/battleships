@@ -5,6 +5,8 @@ class Cell
     @location = location
   end
 
-	
+	def status
+		:water
+	end
 
 end
