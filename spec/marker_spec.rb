@@ -6,8 +6,9 @@ describe Marker do
 	let(:board) {Board.new}
 
 
-	it 'should be able to be a hit' do
-
+	it 'should know its location' do
+		marker.my_location
+		
 	end
 
 end
