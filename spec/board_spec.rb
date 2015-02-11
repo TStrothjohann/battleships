@@ -20,7 +20,11 @@ describe Board do
     board.hold(cella2)
     board.hold(cellb1)
     board.hold(cellb2)
-    expect(board.hold(cell)).to aise_error(RuntimeError, 'Board is full')
+    expect{board.hold(cell)}.to raise_error(RuntimeError, 'Board is full')
+  end
+
+  it 'should' do
+    
   end
 
 end
