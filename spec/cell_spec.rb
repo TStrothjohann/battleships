@@ -24,4 +24,8 @@ describe Cell do
 		expect(cella1.status).to eq(:ship)
 	end
 
+	it 'should only allow it\'s player to change it from water to ship' do
+		
+	end
+
 end
