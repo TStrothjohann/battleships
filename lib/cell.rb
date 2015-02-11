@@ -1,8 +1,10 @@
 class Cell
+  attr_accessor :location
 
-	def location
-		:a1
-	end
+  def initialize (location)
+    @location = location
+  end
+
 	
 
 end
