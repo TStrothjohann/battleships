@@ -8,7 +8,7 @@ describe Player do
   let(:cella1) {Cell.new("a1")}
   let(:cella2) {Cell.new("a1")}
 
-	it "should be able to change a cells status" do
+	it "should be able to set a ship" do
     player.set_ship(cella1)
     expect(cella1.status).to eq(:ship)
 	end
@@ -25,12 +25,9 @@ describe Player do
 
   it 'should be able to take a shot and hit a ship' do
     player.set_ship(cella1)
-    expect(cella1.status).to eq(:ship)
     player.take_shot(cella1)
     expect(cella1.status).to eq(:hit)
   end
-
-
 
 
 	

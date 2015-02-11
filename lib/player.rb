@@ -12,11 +12,15 @@ class Player
   def take_shot (cell)
     if cell.status == :missed || cell.status == :hit
     	raise "You have already shot on that cell!"
-    else cell.status == :water
+    elsif cell.status == :water
       cell.change_status(:missed)
+    else
+      cell.change_status(:hit)
     end
-
   end
+
+
+
 
 
 end
