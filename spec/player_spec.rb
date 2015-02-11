@@ -15,9 +15,14 @@ describe Player do
 
   it "should be able to take a shot and miss" do
     player.take_shot(cella2)
-    expect(cella1.status).to eq(:missed)
+    expect(cella2.status).to eq(:missed)
   end
 
+  it "should get a message, if the cell has already been shot at" do
+    
+    expect{player.take_shot(cella1)}.to raise_error(RuntimeError, "You have already shot on that cell!")
+
+  end
 
 
 

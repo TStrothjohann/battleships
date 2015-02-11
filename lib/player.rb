@@ -9,5 +9,12 @@ class Player
 
 	end
 
+  def take_shot (cell)
+    if cell.status == :water
+      cell.change_status(:missed)
+    end
+
+  end
+
 
 end
