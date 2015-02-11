@@ -5,17 +5,18 @@ require 'cell'
 describe Player do 
 
 	let(:player) {Player.new}
-	
-  # let(:cella1){double :cell, status: :ship, location: :a1}
-  # let(:cella2){double :cell, status: :water, location: :a2}
-  # let(:cellb1){double :cell, status: :water, location: :b1}
-  # let(:cellb2){double :cell, status: :water, location: :b2}
-  let(:cell){double :cell}
+  let(:cella1) {Cell.new("a1")}
+  let(:cella2) {Cell.new("a1")}
 
-	it "should be able to change Cell1a's status to ship" do
-    cell.location = :a1
-    expect(cell.location).to eq(:a1)
+	it "should be able to change a cells status" do
+    player.set_ship(cella1)
+    expect(cella1.status).to eq(:ship)
 	end
+
+  it "should be able to take a shot and miss" do
+    player.take_shot(cella2)
+    expect(cella1.status).to eq(:missed)
+  end
 
 
 
