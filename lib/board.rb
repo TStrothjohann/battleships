@@ -26,7 +26,13 @@ class Board
   end
 
   def place_shot(shot,cell)
-    grid[cell].status = shot
+    if grid[cell].status == :water
+      grid[cell].status = :missed
+    else
+      grid[cell].status = :hit
+    end
   end
+
+
     
 end
