@@ -40,5 +40,9 @@ describe Player do
     expect(cella1.status).to eq(:hit)
   end
 
+  it "should have a name on creation" do
+    expect(player.name).to be_player.object_id
+  end
+
 	
 end
