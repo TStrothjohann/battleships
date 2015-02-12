@@ -28,9 +28,11 @@ class Board
   def place_shot(shot,cell)
     if grid[cell].status == :water
       grid[cell].status = :missed
+    elsif grid[cell].status == :missed || grid[cell].status == :hit
+    raise 'You have already shot on that cell!'
     else
-      grid[cell].status = :hit
-    end
+        grid[cell].status = :hit
+      end
   end
 
 

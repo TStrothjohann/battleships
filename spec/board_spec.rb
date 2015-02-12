@@ -7,7 +7,7 @@ describe Board do
   let(:cellb1){double :cell, status: :missed, location: :b1}
   let(:cellb2){double :cell, status: ship, location: :b2}
   let(:cell)  {double :cell}
-  let(:ship)  {double :ship}
+  let(:ship)  {double :ship, floating?: true, hit: 0}
   let(:shot)  {double :shot, position: :b1}
 
 
@@ -56,5 +56,15 @@ describe Board do
     allow(cellb1).to receive(:status=)
     expect{board.place_shot(shot,2)}.to raise_error(RuntimeError, 'You have already shot on that cell!')
   end
+
+  # it 'should tell a ship that it has been hit' do
+  #   make_board
+  #   allow(cellb2).to receive(:status=)
+  #   expect(board.grid[3]).to receive(:status=).with :hit
+  #   board.place_shot(shot,3)
+  #   allow(ship).to receive(:hit)
+  #   expect(ship).to receive(:hit). with 1
+  #   expect(board.give_hit(ship))
+  # end
 
 end
