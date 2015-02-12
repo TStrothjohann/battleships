@@ -16,7 +16,8 @@ class Player
 		if cell.status == :missed || cell.status == :hit
   		raise "You have already shot on that cell!"
   	elsif cell.status == :water
-    	cell.change_status(:missed)
+    	cell.status = :missed
+      p cell.status
   	else
     	cell.change_status(:hit)
   	end

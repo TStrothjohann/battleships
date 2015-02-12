@@ -23,8 +23,4 @@ describe Board do
     expect{board.hold(cell)}.to raise_error(RuntimeError, 'Board is full')
   end
 
-  it 'should' do
-    
-  end
-
 end

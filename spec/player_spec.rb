@@ -19,22 +19,20 @@ describe Player do
     expect(player.calculate_ship_cells(ship2,cella1,:horizontal)).to eq([:a1,:a2,:a3,:a4,:a5])
   end
 
-  xit 'should be able to place a ship of length 2' do
-    # allow(cella1).to receive(:status=).with ship2
-    # allow(cella1).to receive(:status).and_return(ship2)
-    # allow(cella2).to receive(:status=).with ship2
-    # allow(cella2).to receive(:status).and_return(ship2)
-    player.set_ship(ship2,cella1,:horizontal)
-    expect(player.set_ship(ship2,cella1,:horizontal)).to eq(ship)
-  end
-
-
-  # it "should be able to take a missed shot" do
-  #   allow(cella1).to receive(:status=).with :missed
-  #   allow(cella1).to receive(:status).and_return(ship)
-  #   player.take_shot(board,cella2)
-  #   expect(cella2.status).to eq(:missed)
+  # xit 'should be able to place a ship of length 2' do
+  #   # allow(cella1).to receive(:status=).with ship2
+  #   # allow(cella1).to receive(:status).and_return(ship2)
+  #   # allow(cella2).to receive(:status=).with ship2
+  #   # allow(cella2).to receive(:status).and_return(ship2)
+  #   player.set_ship(ship2,cella1,:horizontal)
+  #   expect(player.set_ship(ship2,cella1,:horizontal)).to eq(ship)
   # end
+
+
+  it "should be able to take a missed shot" do
+    allow(cella1).to receive(:status=).with :missed
+    expect(player.take_shot(board,cella1)). to eq :missed
+  end
 
   # it "should get a message, if the cell has already been shot at" do
   #   load_board
