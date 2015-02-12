@@ -21,8 +21,12 @@ class Board
     cell_count == grid_size
   end
 
-  def place(item)
+  def place_ship(item)
     grid[0].status = item
   end
 
+  def place_shot(shot,cell)
+    grid[cell].status = shot
+  end
+    
 end
