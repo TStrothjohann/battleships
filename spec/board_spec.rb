@@ -15,7 +15,7 @@ describe Board do
     expect(board.cell_count).to eq(1)
   end
 
-  it 'should no accept any more cells when the board is full' do
+  it 'should not accept any more cells when the board is full' do
     board.hold(cella1)
     board.hold(cella2)
     board.hold(cellb1)

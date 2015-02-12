@@ -6,8 +6,4 @@ class Cell
     @status = :water
   end
 
-  def change_status(status)
-    @status = status
-  end
-
 end

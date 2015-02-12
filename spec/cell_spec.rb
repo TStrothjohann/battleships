@@ -20,12 +20,8 @@ describe Cell do
 
 	it 'should be able to change it\'s status' do
 		expect(cella1.status).to eq(:water)
-		cella1.change_status(:ship)
+		cella1.status = :ship
 		expect(cella1.status).to eq(:ship)
-	end
-
-	it 'should only allow it\'s player to change it from water to ship' do
-		
 	end
 
 end
