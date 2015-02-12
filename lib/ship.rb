@@ -13,7 +13,7 @@ class Ship
 		@hit_count == @length ? @floating = false : @floating
 	end
 
-	def hit!
+	def hit
 		@hit_count += 1
 	end
 

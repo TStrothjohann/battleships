@@ -1,8 +1,7 @@
 class Cell
-  attr_accessor :location, :status
+  attr_accessor :status
 
-  def initialize (location)
-    @location = location
+  def initialize
     @status = :water
   end
 

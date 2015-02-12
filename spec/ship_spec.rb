@@ -2,7 +2,7 @@ require 'ship'
 
 describe Ship do 
 
-	let(:ship) {Ship.new(1)}
+	let(:ship) {Ship.new}
 	
 	it 'should be floating when created' do
 		expect(ship).to be_floating
@@ -17,12 +17,12 @@ describe Ship do
 	end
 
 	it 'should be able to be hit.' do
-		ship.hit!
+		ship.hit
 		expect(ship.hit_count).to eq(1)
 	end
 
 	it 'it should know, when it\'s sunk' do
-		ship.hit!
+		ship.hit
 		expect(ship).not_to be_floating
 	end
 
