@@ -21,4 +21,8 @@ class Board
     cell_count == grid_size
   end
 
+  def place(item)
+    grid[0].status = item
+  end
+
 end
